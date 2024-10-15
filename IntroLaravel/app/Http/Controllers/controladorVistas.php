@@ -21,4 +21,9 @@ class controladorVistas extends Controller
     public function component(){
         return view('componentes');
     }
+
+    public function procesarCliente(Request $peticion){
+        //return 'La información del cliente llegó al controlador';
+        return $peticion->all();
+    }
 }
