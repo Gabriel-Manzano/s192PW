@@ -24,6 +24,20 @@ class controladorVistas extends Controller
 
     public function procesarCliente(Request $peticion){
         //return 'La información del cliente llegó al controlador';
-        return $peticion->all();
+
+        //Devuelve todo lo que contiene la petición
+        //return $peticion->all();
+
+        //Envía la ruta desde donde se hizo la petición
+        //return $peticion->path(); 
+
+        //Devulve la URL completa desde donde se hizo la petición
+        //return $peticion->url(); 
+
+        //Devuelve la ip desde dónde se hizo la petición
+        //return $peticion->ip();
+        
+        return $peticion->ip();
+
     }
 }
