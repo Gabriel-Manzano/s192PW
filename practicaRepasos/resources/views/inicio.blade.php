@@ -6,7 +6,7 @@
 
     @vite(['resources/js/app.js'])
 
-    <title>Document</title>
+    <title>Inicio</title>
 </head>
 <body>
     <center>
