@@ -11,6 +11,23 @@
 </head>
 
 <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+        <div class="container-fluid">
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link {{ request()->routeIs('rutainicio') ? 'text-info' : '' }} && {{ request()->routeIs('/') ? 'text-info' : '' }}"
+                            aria-current="page" href="{{ route('rutainicio') }}"> Portada </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link {{ request()->routeIs('rutarepaso1') ? 'text-info' : '' }} && {{ request()->routeIs('rutavalores') ? 'text-info' : '' }}"
+                            aria-current="page" href="{{ route('rutarepaso1') }}"> Conversor </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
     <center>
         <br>
         <form action="/enviarValores" method="POST">
@@ -35,13 +52,12 @@
             </div>
             <br>
             @if(isset($resultado))
-            <div class="alert alert-success mt-3">
-                Resultado: {{ $resultado }}
-            </div>
+                <div class="alert alert-success mt-3">
+                    Resultado: {{ $resultado }}
+                </div>
             @endif
         </form>
     </center>
 </body>
 
 </html>
-
