@@ -23,6 +23,7 @@ class controladorVistas extends Controller
     }
 
     public function procesarCliente(Request $peticion){
+
         //return 'La información del cliente llegó al controlador';
 
         //Devuelve todo lo que contiene la petición
@@ -48,6 +49,13 @@ class controladorVistas extends Controller
         //return back();
 
         //Redirección con valores en session
+
+        $validate=$peticion->validate([
+            'txtnombre'=>'required|min:5|max:25',
+            'txtapellido'=>'required|min:5|max:25',
+            'txtcorreo'=>'required|email:rfc,dns',
+            'txttelefono'=>'required'
+        ]);
 
         $usuario = $peticion->input('txtnombre');
         session()->Flash('exito','Se guardó el usuario '.$usuario);

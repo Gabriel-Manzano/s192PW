@@ -10,7 +10,7 @@
     @endif
 
     @session('exito')
-        <x-Alert tipo="info"> {{$value}} </x-Alert>
+        <x-Alert tipo="success"> {{$value}} </x-Alert>
     @endsession
 
 
@@ -29,18 +29,22 @@
                 <div class="mb-3">
                     <label for="nombre" class="form-label">Nombre: </label>
                     <input type="text" class="form-control" name="txtnombre">
+                    <small class="fst-italic text-danger">{{$errors->first('txtnombre')}}</small>
                 </div>
                 <div class="mb-3">
                     <label for="Apellido" class="form-label">Apellido: </label>
                     <input type="text" class="form-control" name="txtapellido">
+                    <small class="fst-italic text-danger">{{$errors->first('txtapellido')}}</small>
                 </div>
                 <div class="mb-3">
                     <label for="correo" class="form-label">Correo: </label>
-                    <input type="email" class="form-control" name="txtcorreo">
+                    <input type="text" class="form-control" name="txtcorreo">
+                    <small class="fst-italic text-danger">{{$errors->first('txtcorreo')}}</small>
                 </div>
                 <div class="mb-3">
                     <label for="telefono" class="form-label">Telefono: </label>
-                    <input type="number" class="form-control" name="txttelefono">
+                    <input type="text" class="form-control" name="txttelefono">
+                    <small class="fst-italic text-danger">{{$errors->first('txttelefono')}}</small>
                 </div>
         </div>
 
