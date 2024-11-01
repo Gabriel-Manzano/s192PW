@@ -15,6 +15,9 @@
             bottom: 0;
             left: 0;
         }
+        form {
+            width: 100%;
+        }
     </style>
 </head>
 
@@ -38,7 +41,7 @@
         <footer id="footer" class="py-3 my-4">
             <ul class="nav justify-content-center border-bottom pb-3 mb-3">
                 <li class="nav-item">
-                    <p class="text-center text-muted">©Bibliotecas Sapientia</p>
+                    <p class="text-center text-muted">©2024 Bibliotecas Sapientia. Todos los derechos reservados.</p>
                 </li>
             </ul>
             <p class="text-center text-muted">31/10/2024</p>
