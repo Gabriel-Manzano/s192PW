@@ -15,10 +15,12 @@
             bottom: 0;
             left: 0;
         }
+
         form {
             width: 100%;
         }
     </style>
+
 </head>
 
 <body>

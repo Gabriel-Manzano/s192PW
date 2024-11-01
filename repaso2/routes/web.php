@@ -5,3 +5,4 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [ControladorVistas::class, 'Inicio'])->name('rutainicio');
 Route::get('/Registro', [ControladorVistas::class,'Registro'])->name('rutaregistro');
+Route::post('/enviarLibro', [ControladorVistas::class, 'procesarLibros'])->name('rutaenviar');
