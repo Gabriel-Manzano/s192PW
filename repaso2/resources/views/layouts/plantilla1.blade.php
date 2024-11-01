@@ -29,11 +29,11 @@
 
             <li class="nav-item">
                 <a class="nav-link {{ request()->routeIs('rutaregistro') ? '' : 'active'}} " aria-current="page"
-                    href="{{ route('rutainicio')}}">Inicio</a>
+                    href="{{ route('rutainicio')}}">{{__('Inicio')}}</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link {{ request()->routeIs('rutainicio') ? '' : 'active'}} " aria-current="page"
-                    href="{{ route('rutaregistro') }}">Registro</a>
+                    href="{{ route('rutaregistro') }}">{{__('Registro')}}</a>
             </li>
 
         </ul>
@@ -43,7 +43,7 @@
         <footer id="footer" class="py-3 my-4">
             <ul class="nav justify-content-center border-bottom pb-3 mb-3">
                 <li class="nav-item">
-                    <p class="text-center text-muted">©2024 Bibliotecas Sapientia. Todos los derechos reservados.</p>
+                    <p class="text-center text-muted">©2024 Bibliotecas Sapientia. {{__('Todos los derechos reservados.')}}</p>
                 </li>
             </ul>
             <p class="text-center text-muted">31/10/2024</p>
