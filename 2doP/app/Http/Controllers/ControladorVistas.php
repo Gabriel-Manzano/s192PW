@@ -11,7 +11,8 @@ class ControladorVistas extends Controller{
     }
 
     public function procesarUsuario(ValidadorUsuarios $validacion){
-        session()->flash('exito');
+        $usuario = $validacion->input('txtcorreo');
+        session()->flash('exito', 'Todo correcto se ha guardado el usuario.');
         return to_route('forUsu');
     }
 }
