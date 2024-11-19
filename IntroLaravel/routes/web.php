@@ -17,7 +17,6 @@ Route::view('/componentes','componentes')->name('rutacomponentes'); */
 // Controlador vistas
 
 Route::get('/',[controladorVistas::class,'home'])->name('rutainicio');
-Route::get('/clientes',[controladorVistas::class,'consulta'])->name('rutaclientes');
 Route::get('/componentes',[controladorVistas::class,'component'])->name('rutacomponenetes');
 Route::post('/enviarCliente',[controladorVistas::class,'procesarCliente'])->name('rutaenviar');
 
@@ -26,3 +25,5 @@ Route::post('/enviarCliente',[controladorVistas::class,'procesarCliente'])->name
 Route::get('/cliente/create',[ClienteController::class,'create'])->name('rutaform');
 
 Route::post('/cliente', [ClienteController::class,'store'])->name('enviaCliente');
+
+Route::get('/cliente',[ClienteController::class,'index'])->name('rutaclientes');

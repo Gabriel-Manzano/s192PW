@@ -10,11 +10,12 @@ use App\Http\Requests\validadorClientes;
 class ClienteController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Nos sirve para la consulta del CRUD.
      */
     public function index()
     {
-        //
+        $consultaClientes= DB::table('clientes')->get();
+        return view('clientes', compact('consultaClientes'));
     }
     
     /**
