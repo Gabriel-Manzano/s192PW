@@ -27,3 +27,5 @@ Route::get('/cliente/create',[ClienteController::class,'create'])->name('rutafor
 Route::post('/cliente', [ClienteController::class,'store'])->name('enviaCliente');
 
 Route::get('/cliente',[ClienteController::class,'index'])->name('rutaclientes');
+
+Route::get('/cliente/formulario_update/{$id}/edit',[ClienteController::class,'edit'])->name('rutaformularioclientes');

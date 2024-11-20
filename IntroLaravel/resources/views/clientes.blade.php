@@ -20,12 +20,11 @@
                     <h5 class="fw-medium"> {{ $cliente->telefono }}</h5>
                     <p class="card-text fw-lighter"></p>
 
-
                 </div>
 
                 <div class="card-footer text-muted">
-                    <button type="submit" class="btn btn-warning btn-sm">{{__('Actualizar')}}</button>
-                    <button type="submit" class="btn btn-danger btn-sm">{{__('Eliminar')}} </button>
+                    <a href="{{ route('rutaformularioclientes',$cliente->id) }}" class="btn btn-warning btn-sm">{{__('Actualizar')}}</a>
+                    <a href="{{ route('rutaformularioclientes') }}" class="btn btn-danger btn-sm">{{__('Eliminar')}} </a>
 
                 </div>
 
