@@ -36,12 +36,14 @@
                     </div>
 
                     <div class="card-footer text-muted d-flex justify-content-between">
-                        <a href="{{ route('rutaformularioclientes', ['id' => $cliente->id]) }}" class="btn btn-warning btn-sm">
-                            {{ __('Actualizar') }}
-                        </a>
-
-                        <form id="delatefom{{$cliente->id}}" action="{{ route('rutaeliminarcliente', ['id' => $cliente->id]) }}" method="POST"
-                            class="d-inline">
+                        <form>
+                            <a href="{{ route('rutaformularioclientes', ['id' => $cliente->id]) }}"
+                                class="btn btn-warning btn-sm">
+                                {{ __('Actualizar') }}
+                            </a>
+                        </form>
+                        <form id="delatefom{{$cliente->id}}" action="{{ route('rutaeliminarcliente', ['id' => $cliente->id]) }}"
+                            method="POST" class="d-inline">
                             @csrf
                             @method('DELETE')
                             <button type="button" class="btn btn-danger btn-sm" onclick="confirmarCliente({{$cliente->id}})">
@@ -59,16 +61,15 @@
 
     </div> {{-- divcontainer --}}
     <script>
-        function confirmarCliente(clienteid){
+        function confirmarCliente(clienteid) {
             Swal.fire({
-                title: "Do you want to save the changes?",
-                showDenyButton: true,
+                title: "Do you want to delete de user?",
                 showCancelButton: true,
                 confirmButtonText: "Save",
-                denyButtonText: `Don't save`
             }).then((result) => {
-                /* Redocuad more about isConfirmed, isDenied below */
-              document.getElementById(`delatefom${clienteid}`).submit();
+                if (result.isConfirmed) {
+                    document.getElementById(`delatefom${clienteid}`).submit();
+                }
             });
         }
     </script>
