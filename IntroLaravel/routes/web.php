@@ -22,10 +22,16 @@ Route::post('/enviarCliente',[controladorVistas::class,'procesarCliente'])->name
 
 // Controlador Cliente
 
-Route::get('/cliente/create',[ClienteController::class,'create'])->name('rutaform');
+Route::get('/Registro',[ClienteController::class,'create'])->name('rutaform');
 
-Route::post('/cliente', [ClienteController::class,'store'])->name('enviaCliente');
+Route::post('/Enviar', [ClienteController::class,'store'])->name('enviaCliente');
 
-Route::get('/cliente',[ClienteController::class,'index'])->name('rutaclientes');
+Route::get('/clientes',[ClienteController::class,'index'])->name('rutaclientes');
 
-Route::get('/cliente/formulario_update/{$id}/edit',[ClienteController::class,'edit'])->name('rutaformularioclientes');
+Route::get('/clientes/{id}/edit',[ClienteController::class,'edit'])->name('rutaformularioclientes');
+
+Route::post('/clientes', [ClienteController::class, 'store'])->name('enviaCliente');
+
+Route::put('/clientes/{id}', [ClienteController::class, 'update'])->name('rutaactualizarcliente');
+
+Route::delete('/clientes/{id}', [ClienteController::class, 'destroy'])->name('rutaeliminarcliente');

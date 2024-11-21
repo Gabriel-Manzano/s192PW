@@ -25,7 +25,7 @@
                         <a class="nav-link {{ request()->routeIs('rutaform')?'text-info':'' }}" aria-current="page" href="{{ route('rutaform') }}">{{__('Registro Clientes')}}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {{ request()->routeIs('rutaclientes')?'text-info':'' }}" aria-current="page" href="{{ route('rutaclientes') }}" href="{{ route('rutaclientes') }}">{{__('Consulta Clientes')}}</a>
+                        <a class="nav-link {{ request()->routeIs('rutaclientes')?'text-info':'' }}" aria-current="page" href="{{ route('rutaclientes') }}" >{{__('Consulta Clientes')}}</a>
                     </li>
 
                 </ul>
